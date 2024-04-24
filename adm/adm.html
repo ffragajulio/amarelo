@@ -1,17 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login ADM</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="adm.css">
 </head>
 <body>
+    <header>
+        <h1>Amarelo</h1>
+    </header>
+    <main>
+        <section class="login-container">
+            <h2>Login</h2>
+            <form action="/submit-your-login-form" method="POST">
+                <div class="input-group">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Empresa XYZ. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
 
-    <input type="text" id="cfess" placeholder="Registro CFESS">
+
+
+<!-- <input type="text" id="cfess" placeholder="Registro CFESS">
     <input type="text" id="nome" placeholder="Digite o segundo valor">
 
     <button onclick="mostrarValores()">Mostrar valores</button>
 
-    <script src="adm.js"></script>
-</body>
-</html>
+    <script src="adm.js"></script> -->
