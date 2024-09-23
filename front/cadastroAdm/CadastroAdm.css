@@ -1,0 +1,199 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: whitesmoke;
+  padding: 6px;
+  width: 350px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 darkgrey;
+}
+
+form {
+  position: absolute;
+  margin-top: 80px;
+  transition: .5s;
+  width: 300px;
+  height: 400px;
+}
+
+.buttonsForm {
+  margin-top: 40px;
+  position: relative;
+  border-radius: 30px;
+  box-shadow: 0 0 7px 0 blueviolet;
+}
+
+.buttonsForm button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  position: relative;
+  padding: 10px 29px;
+}
+
+.btnColor {
+  position: absolute;
+  width: 108px;
+  height: 100%;
+  background: linear-gradient(to right, #5956e9, #a963f8);
+  border-radius: 30px;
+  transition: .3s;
+}
+
+input[type="text"], input[type="password"] {
+  border: none;
+  margin-top: 40px;
+  border-radius: 60px;
+  padding: 8px 0 8px 35px;
+  outline: none;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background: #ffde59;
+  color: rgb(0, 0, 0);
+  border-radius: 30px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 0 8px 15px;
+  font-size: 15px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.divCheck {
+  margin: 10px 0 0 5px;
+  width: 80%;
+  font-size: 13px;
+}
+
+#signin {
+  left: 25px;
+}
+
+#signup {
+  left: 450px;
+}
+
+i {
+  position: absolute;
+  left: 0;
+  padding: 10px 10px;
+}
+
+.iEmail {
+  top: 40px;
+}
+
+.iPassword {
+  top: 114px;
+}
+
+.iPassword2 {
+  top: 190px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body {
+  background-color: #000000;
+  height: 100vh;
+  align-items: center;
+}
+
+nav.menu-lateral{
+  height: 100vh;
+  background-color: rgb(73, 73, 73);
+  padding: 20px;
+  box-shadow: 3px 0 0 #ffde59;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: .2s;
+}
+
+
+.btn-expandir{
+  width: 100%;
+  padding-left: 10px;
+}
+
+.btn-expandir > i{
+  color: white;
+  font-size: 29px;
+  cursor: pointer;
+}
+
+ul{
+  height: 100%;
+  list-style-type: none;
+}
+
+ul li span.ativo{
+  color: #ffde59;
+}
+
+ul li.item-menu a{
+  transition: .4;
+}
+
+ul li.item-menu a:hover{
+  color: #ffde59;
+}
+
+ul li.item-menu a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+}
+
+ul li.item-menu a .txt-link{
+  margin-left: 35px;
+  display: none;
+}
+
+ul li.item-menu a .icon > i{
+  font-size: 30px;
+}
+
+
+.container{
+display: flex;
+justify-content: center;
+color: #fff;
+}
+
+img{
+  size: 10px;
+} */
