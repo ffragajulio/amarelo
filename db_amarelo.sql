@@ -1,6 +1,14 @@
 CREATE DATABASE db_amarelo; 
 USE db_amarelo;
 
+create table cadastroADM(
+	id INT PRIMARY KEY auto_increment,
+	cadUnico INT NOT NULL,
+   	nome VARCHAR(255),
+   	telefone VARCHAR(12),
+   	cidade VARCHAR(255)
+);
+
 CREATE TABLE padrinho(
 id INT PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR(255) NOT NULL,
@@ -16,20 +24,13 @@ numero_casa VARCHAR(255) NOT NULL,
 complemento VARCHAR(255)
 );
 
-create table cadastroADM(
-	id INT PRIMARY KEY auto_increment,
-	cadUnico INT NOT NULL,
-   	nome VARCHAR(255),
-   	telefone VARCHAR(12),
-   	cidade VARCHAR(255)
-);
-
 CREATE TABLE locais(
   id INT PRIMARY KEY AUTO_INCREMENT,
   nome VARCHAR(255) NOT NULL,
   latitude DECIMAL(10, 8) NOT NULL,
   longitude DECIMAL(11, 8) NOT NULL
 );
+
 CREATE TABLE compromissos (
   id INT PRIMARY KEY AUTO_INCREMENT,
   id_cliente INT NOT NULL,
@@ -60,3 +61,5 @@ CREATE TABLE casos (
 select * from padrinho;
 
 select * from cadastroadm;
+
+INSERT INTO cadastroADM(cadunico, nome, telefone, cidade) VALUES(1, 'teste', 1, 'teste');

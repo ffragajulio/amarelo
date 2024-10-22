@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   margin: 0;
@@ -10,8 +10,8 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .container {
@@ -127,29 +127,18 @@ body {
   align-items: center;
 }
 
-nav.menu-lateral{
+.menu-lateral{
   height: 100vh;
   background-color: rgb(73, 73, 73);
   padding: 20px;
   box-shadow: 3px 0 0 #ffde59;
-
-  position: fixed;
-  top: 0;
-  left: 0;
   overflow: hidden;
   transition: .2s;
 }
 
-
-.btn-expandir{
-  width: 100%;
-  padding-left: 10px;
-}
-
-.btn-expandir > i{
-  color: white;
-  font-size: 29px;
-  cursor: pointer;
+.menu-lateral:hover {
+  width: px;
+  transition: 2s;
 }
 
 ul{
@@ -187,13 +176,12 @@ ul li.item-menu a .icon > i{
   font-size: 30px;
 }
 
-
 .container{
 display: flex;
-justify-content: center;
+justify-content: flex-start;
 color: #fff;
 }
 
 img{
   size: 10px;
-} */
+}

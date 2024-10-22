@@ -11,7 +11,10 @@ async function storeAdm(request, response) {
 
     const query = "INSERT INTO cadastroADM(cadunico, nome, telefone, cidade) VALUES(?, ?, ?, ?)"
 
+    console.log(params)
+
     connection.query(query, params, (err, results) => {
+        console.log(results)
         if(results) {
             response.status(200).json({
                 sucess: true,
@@ -29,24 +32,20 @@ async function storeAdm(request, response) {
 }
 
 async function getAdm(request, response) {
-    const query = "SELECT * FROM cadastroadm"
+    const query = "select * from cadastroadm"
 
-    connection.query(query, params, (err, results) => {
-        if(results) {
+    connection.query(query, (err, results) => {
+        if (results) {
             response.status(200).json({
                 sucess: true,
-                message: "Sucesso!",
+                message: "sucesso",
                 data: results
             })
         } else {
-            response.status(400).json({
-                sucess: false,
-                message: "Erro!",
-                sql: err,
-            })
+            response.st
+
         }
     })
-
 }
 
 module.exports = {
