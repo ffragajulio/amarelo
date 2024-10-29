@@ -1,9 +1,10 @@
 const { Router } = require('express');
 const router = Router();
 
-const { storeAdm, getAdm } = require('../controller/admController');
+const { storeAdm } = require('../controller/admController');
+const { loginAdm } = require('../controller/admLoginController');
 
 router.post('/store/adm', storeAdm);
-router.post('/get/adm', getAdm);
+router.post('/loginadm', loginAdm)
 
 module.exports = router;

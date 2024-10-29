@@ -31,24 +31,6 @@ async function storeAdm(request, response) {
     })
 }
 
-async function getAdm(request, response) {
-    const query = "select * from cadastroadm"
-
-    connection.query(query, (err, results) => {
-        if (results) {
-            response.status(200).json({
-                sucess: true,
-                message: "sucesso",
-                data: results
-            })
-        } else {
-            response.st
-
-        }
-    })
-}
-
 module.exports = {
-    storeAdm,
-    getAdm
+    storeAdm
 }
