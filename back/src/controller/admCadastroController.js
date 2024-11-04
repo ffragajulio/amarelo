@@ -1,19 +1,19 @@
 const connection = require('../config/db');
 const dotenv = require('dotenv').config();
 
-async function loginAdm(request, response) {
+async function cadastroAdm(request, response) {
     const params = Array( 
         request.body.cadunico,
-        request.body.nome
+        request.body.nome,
+        request.body.telefone,
+        request.body.cidade
     )
 
-    const query = "SELECT cadunico, nome from cadastroadm where cadunico = ? and nome = ?;"
-
-    
+    const query = "INSERT INTO cadastroADM(cadunico, nome, telefone, cidade) VALUES(?, ?, ?, ?)"
 
     connection.query(query, params, (err, results) => {
         console.log(results)
-        if(results.length != 0) {
+        if(results) {
             response.status(200).json({
                 sucess: true,
                 message: "Sucesso!",
@@ -30,5 +30,5 @@ async function loginAdm(request, response) {
 }
 
 module.exports = {
-    loginAdm
-};
+    cadastroAdm
+}

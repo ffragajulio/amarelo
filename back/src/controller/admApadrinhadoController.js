@@ -21,6 +21,8 @@ async function storeAdm(request, response) {
                 message: "Sucesso!",
                 data: results
             })
+
+            window.location.href = '..'
         } else {
             response.status(400).json({
                 sucess: false,
