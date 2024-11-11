@@ -23,16 +23,21 @@ numero_casa VARCHAR(255) NOT NULL,
 complemento VARCHAR(255)
 );
 
+CREATE TABLE instituicao(
+	id INT primary key auto_increment,
+    nome VARCHAR(255) NOT NULL,
+    logradouro VARCHAR(255) NOT NULL,
+	cidade VARCHAR(255),
+	numero_casa VARCHAR(255) NOT NULL,
+	complemento VARCHAR(255)
+);
+
 CREATE TABLE apadrinhado(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(255) NOT NULL,
 	cpf VARCHAR(11),
 	foto_perfil TEXT,
-	estado VARCHAR(255),
-	cidade VARCHAR(255),
-	logradouro VARCHAR(255) NOT NULL,
-	numero_casa VARCHAR(255) NOT NULL,
-	complemento VARCHAR(255)
+    instituicao
 );
 
 CREATE TABLE casos (
