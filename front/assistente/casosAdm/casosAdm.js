@@ -3,9 +3,6 @@ let button = document.getElementById("enviar");
 button.onclick = async function(event) {
     event.preventDefault()
     let cadunico = document.getElementById('cadunico').value;
-    let nome = document.getElementById('nome').value;
-    let telefone = document.getElementById('telefone').value;
-    let cidade = document.getElementById('cidade').value;
 
     let dados = {cadunico, nome, telefone, cidade}
 
