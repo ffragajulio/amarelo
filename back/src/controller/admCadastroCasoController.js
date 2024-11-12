@@ -9,7 +9,7 @@ async function cadastroCaso(request, response) {
         request.body.cidade
     )
 
-    const query = "INSERT INTO"
+    const query = "INSERT INTO casos(cpfApadrinhado, cpfPadrinho, cadAssistente, descricao) VALUES(?, ?, ?, ?)"
 
     connection.query(query, params, (err, results) => {
         console.log(results)

@@ -1,8 +1,8 @@
 const { Router } = require('express');
 const router = Router();
 
-const { cadastroCaso } = require('../controller/admCasosController.js');
+const { cadastroCaso } = require('../controller/admCadastroCasoController.js');
 
-router.post('/casos/adm', cadastrarCaso);
+router.post('/casos/adm', cadastroCaso);
 
 module.exports = router;
