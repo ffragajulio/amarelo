@@ -6,11 +6,11 @@ button.onclick = async function(event) {
     let cpfPadrinho = document.getElementById('cpfPadrinho').value;
     let nomeApadrinhado = document.getElementById('nomeApadrinhado').value;
     let cpfApadrinhado = document.getElementById('cpfApadrinhado').value;
+    let instituicaoApadrinhado = document.getElementById('instituicaoApadrinhado').value;
 
-    let dados = {nomePadrinho, cpfPadrinho, nomeApadrinhado, cpfApadrinhado}
+    let dados = {nomePadrinho, cpfPadrinho, nomeApadrinhado, cpfApadrinhado, instituicaoApadrinhado}
 
-    // ARRUMAR URL
-    const response = await fetch("http://localhost:3000/api/cadastro/adm", {
+    const response = await fetch("http://localhost:3000/api/casos/adm", {
         method: "POST",
         headers: {"Content-type": "application/json;charset=UTF-8"},
         body: JSON.stringify(dados)

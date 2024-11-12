@@ -4,6 +4,7 @@ button.onclick = async function(event) {
     event.preventDefault()
     let cadunico = document.getElementById('cadunico').value;
     let nome = document.getElementById('nome').value;
+    
     localStorage.setItem('cadunico', cadunico)
     let dados = {cadunico, nome}
 

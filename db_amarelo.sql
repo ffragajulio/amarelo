@@ -1,4 +1,4 @@
-CREATE DATABASE db_amarelo; 
+CREATE DATABASE db_amarelo;
 USE db_amarelo;
 
 create table cadastroADM(
@@ -27,7 +27,7 @@ CREATE TABLE instituicao(
 	id INT primary key auto_increment,
     nome VARCHAR(255) NOT NULL,
     logradouro VARCHAR(255) NOT NULL,
-	cidade VARCHAR(255),
+	cidade VARCHAR(255) NOT NULL,
 	numero_casa VARCHAR(255) NOT NULL,
 	complemento VARCHAR(255)
 );
@@ -37,17 +37,19 @@ CREATE TABLE apadrinhado(
 	nome VARCHAR(255) NOT NULL,
 	cpf VARCHAR(11),
 	foto_perfil TEXT,
-    instituicao
+    instituicao VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE casos (
   id INT PRIMARY KEY AUTO_INCREMENT,
   id_apadrinhado INT NOT NULL,
   id_padrinho INT NOT NULL,
+  cadunico INT NOT NULL,
   descricao TEXT NOT NULL,
   status ENUM('Aberto','Fechado'),
   FOREIGN KEY (id_apadrinhado) REFERENCES apadrinhado(id),
-  FOREIGN KEY (id_padrinho) REFERENCES padrinho(id)
+  FOREIGN KEY (id_padrinho) REFERENCES padrinho(id),
+  FOREIGN KEY (cadunico) REFERENCES cadastroADM(cadunico)
 );
 
 SELECT padrinho.nome, apadrinhado.nome FROM casos
