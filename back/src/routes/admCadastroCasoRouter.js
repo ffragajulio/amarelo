@@ -3,6 +3,6 @@ const router = Router();
 
 const { cadastroCaso } = require('../controller/admCadastroCasoController.js');
 
-router.post('/casos/adm', cadastroCaso);
+router.post('/cadastroCaso/adm', cadastroCaso);
 
 module.exports = router;

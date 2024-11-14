@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Início</title>
-  <link rel="stylesheet" href="casosAdm.css">
+  <!-- <link rel="stylesheet" href="casosAdm.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
@@ -40,13 +40,20 @@
   <h1>CADASTRO DE CASOS</h1>
   <form>
     <p>Dados do Padrinho</p>
+    <label>nome</label>
     <input type="text" id="nomePadrinho" placeholder="NOME DO PADRINHO">
+    <label>cpf</label>
     <input type="text" id="cpfPadrinho" placeholder="CPF DO PADRINHO">
 
     <p>Dados do Apadrinhado</p>
+    <label>nome</label>
     <input type="text" id="nomeApadrinhado" placeholder="NOME DO APADRINHADO">
+    <label>cpf</label>
     <input type="text" id="cpfApadrinhado" placeholder="CPF DO APADRINHADO">
-    <input type="text" id="instituicaoApadrinhado" placeholder="INSTITUIÇÃO DO APADRINHADO">
+
+    <p>Dados do caso</p>
+    <label>instituicao</label>
+    <input type="text" id="instituicao" placeholder="INSTITUICAO">
 
     <button type="button" id="cadastrarCaso"><a href="../casosAdm/casosAdm.html">Cadastrar Caso</a></button>
   </form>

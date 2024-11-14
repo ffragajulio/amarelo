@@ -2,14 +2,17 @@ const connection = require('../config/db');
 const dotenv = require('dotenv').config();
 
 async function cadastroCaso(request, response) {
-    const params = Array( 
-        request.body.nomePadrinho,
-        request.body.cpfPadrinho,
+    const params = Array(
+        request.body.cpfApadrinhado,
         request.body.nomeApadrinhado,
-        request.body.cidade
+        request.body.cpfPadrinho,
+        request.body.nomePadrinho,
+        request.body.instituicaoApadrinhado,
+        request.body.cadunico
     )
+    console.log(params);
 
-    const query = "INSERT INTO casos(cpfApadrinhado, cpfPadrinho, cadAssistente, descricao) VALUES(?, ?, ?, ?)"
+    const query = "INSERT INTO casos (cpfApadrinhado, nomeApadrinhado, cpfPadrinho, nomePadrinho, instituicao, cadAssistente, descricao) VALUES (?, ?, ?, ?, ?, ?, ?);"
 
     connection.query(query, params, (err, results) => {
         console.log(results)

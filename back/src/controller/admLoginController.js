@@ -9,8 +9,6 @@ async function loginAdm(request, response) {
 
     const query = "SELECT cadunico, nome from cadastroadm where cadunico = ? and nome = ?;"
 
-    
-
     connection.query(query, params, (err, results) => {
         console.log(results)
         if(results.length != 0) {
@@ -28,6 +26,7 @@ async function loginAdm(request, response) {
         }
     })
 }
+
 
 module.exports = {
     loginAdm

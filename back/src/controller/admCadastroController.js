@@ -31,4 +31,4 @@ async function cadastroAdm(request, response) {
 
 module.exports = {
     cadastroAdm
-}
+};

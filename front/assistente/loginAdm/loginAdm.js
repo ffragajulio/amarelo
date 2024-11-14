@@ -19,7 +19,7 @@ button.onclick = async function(event) {
 
     if(content.sucess) {
         alert("Sucesso!")
-        window.location.href="../homeAdm/homeAdm.html"
+        window.location.href="../casosAdm/casosAdm.html"
     } else {
         alert("Não foi criado!")
         console.log(content.sql)

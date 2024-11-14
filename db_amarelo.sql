@@ -38,12 +38,16 @@ CREATE TABLE apadrinhado(
     instituicao INT NOT NULL
 );
 
-CREATE TABLE casos (
+CREATE TABLE casos(
   id INT PRIMARY KEY AUTO_INCREMENT,
-  cpfApadrinhado INT NOT NULL,
-  cpfPadrinho INT NOT NULL,
+  cpfApadrinhado INT,
+  nomeApadrinhado VARCHAR(255),
+  cpfPadrinho INT,
+  nomePadrinho VARCHAR(255),
+  instituicao VARCHAR(255),
   cadAssistente INT NOT NULL,
   descricao TEXT,
+  
   FOREIGN KEY (cpfApadrinhado) REFERENCES apadrinhado(cpf),
   FOREIGN KEY (cpfPadrinho) REFERENCES padrinho(cpf),
   FOREIGN KEY (cadAssistente) REFERENCES cadastroADM(cadunico)
@@ -55,14 +59,17 @@ INNER JOIN padrinho ON padrinho.id = casos.id_padrinho
 INNER JOIN apadrinhado ON apadrinhado.id = casos.id_apadrinhado
 WHERE casos.id = 1;
 
-select * from casos;
-select * from padrinho;
-select * from cadastroadm;
 
-drop table casos;
-drop table padrinho;
+select * from cadastroADM;
+select * from padrinho;
+select * from instituicao;
+select * from apadrinhado;
+select * from casos;
+
 drop table cadastroADM;
+drop table padrinho;
+drop table instituicao;
+drop table apadrinhado;
+drop table casos;
 
 SELECT cadunico, nome from cadastroadm where cadunico = "1" and nome = "teste";
-
-INSERT INTO cadastroadm(cadunico, nome, telefone, cidade) VALUES(1, 'teste', 1, 'teste');

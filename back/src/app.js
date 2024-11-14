@@ -2,8 +2,8 @@ const express = require('express');
 const dotenv = require('dotenv').config();
 
 const admCadastro = require('./routes/admCadastroRouter');
-const admLogin = require('./routes/admLoginRouter')
-const admCasos = require('./routes/admCasosRouter')
+const admLogin = require('./routes/admLoginRouter');
+const admCasos = require('./routes/admCadastroCasoRouter');
 
 const cors = require('cors');
 const app = express();
@@ -14,5 +14,6 @@ app.use(cors());
 
 app.use('/api', admCadastro);
 app.use('/api', admLogin);
+app.use('/api', admCasos);
 
 module.exports = app;

@@ -1,5 +1,6 @@
 let button = document.getElementById("cadastrarCaso");
-
+let cadunico = localStorage.getItem('cadunico');
+console.log(cadunico);
 button.onclick = async function(event) {
     event.preventDefault()
     let nomePadrinho = document.getElementById('nomePadrinho').value;
@@ -7,10 +8,14 @@ button.onclick = async function(event) {
     let nomeApadrinhado = document.getElementById('nomeApadrinhado').value;
     let cpfApadrinhado = document.getElementById('cpfApadrinhado').value;
     let instituicaoApadrinhado = document.getElementById('instituicaoApadrinhado').value;
+    
+    
 
-    let dados = {nomePadrinho, cpfPadrinho, nomeApadrinhado, cpfApadrinhado, instituicaoApadrinhado}
+    let dados = {nomePadrinho, cpfPadrinho, nomeApadrinhado, cpfApadrinhado, instituicaoApadrinhado, cadunico}
+    
+    
 
-    const response = await fetch("http://localhost:3000/api/casos/adm", {
+    const response = await fetch("http://localhost:3000/api/cadastroCaso/adm", {
         method: "POST",
         headers: {"Content-type": "application/json;charset=UTF-8"},
         body: JSON.stringify(dados)
