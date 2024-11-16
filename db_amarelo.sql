@@ -12,13 +12,12 @@ CREATE TABLE padrinho(
 cpf INT PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR(255) NOT NULL,
 telefone VARCHAR(11) NOT NULL unique,
-senha VARCHAR(255) NOT NULL,
-foto_perfil TEXT,
 cep VARCHAR(8) NOT NULL,
 cidade VARCHAR(255),
 logradouro VARCHAR(255) NOT NULL,
 numero_casa VARCHAR(255) NOT NULL,
-complemento VARCHAR(255)
+complemento VARCHAR(255),
+senha VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE instituicao(
@@ -34,16 +33,15 @@ CREATE TABLE apadrinhado(
 	nome VARCHAR(255) NOT NULL,
 	cpf INT PRIMARY KEY,
     dataNasc DATE,
-	foto_perfil TEXT,
-    instituicao INT NOT NULL
+    instituicao VARCHAR(255)
 );
 
 CREATE TABLE casos(
   id INT PRIMARY KEY AUTO_INCREMENT,
-  cpfApadrinhado INT,
-  nomeApadrinhado VARCHAR(255),
-  cpfPadrinho INT,
   nomePadrinho VARCHAR(255),
+  cpfPadrinho INT unique,
+  nomeApadrinhado VARCHAR(255),
+  cpfApadrinhado INT unique,
   instituicao VARCHAR(255),
   cadAssistente INT NOT NULL,
   descricao TEXT,
